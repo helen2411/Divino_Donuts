@@ -8,3 +8,14 @@
     --corPrimaria1: #ff6dc0;
 }
 
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #6DE3F0; /* Cor de fundo aproximada do azul/verde água */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupa a altura total da viewport */
+    position: relative; /* Para posicionar os donuts */
+}
+
