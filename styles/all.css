@@ -1,0 +1,10 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+    --corPrimaria: #0cc0df;
+    --corPrimaria1: #ff6dc0;
+}
+
