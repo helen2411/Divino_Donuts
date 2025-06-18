@@ -1,2 +1,2 @@
 # Divino_Donuts
-Projeto full Stack desenvolvido no Senai
+Projeto full Stack sendo desenvolvido no Senai
