@@ -1,0 +1,51 @@
+[
+    {
+        "id": "doce001",
+        "nome": "Donut Clássico de Morango",
+        "preco": "8.50",
+        "categoria": "doces",
+        "imagem": "../img/produtos/doce-morango.png"
+    },
+    {
+        "id": "doce002",
+        "nome": "Donut de Chocolate Belga",
+        "preco": "9.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/doce-chocolate.png"
+    },
+    {
+        "id": "doce003",
+        "nome": "Donut de Doce de Leite",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/doce-leite.png"
+    },
+    {
+        "id": "salg001",
+        "nome": "Donut de Calabresa com Queijo",
+        "preco": "10.00",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/salgado-calabresa.png"
+    },
+    {
+        "id": "salg002",
+        "nome": "Donut de Frango com Catupiry",
+        "preco": "10.50",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/salgado-frango.png"
+    },
+    {
+        "id": "beb001",
+        "nome": "Café Expresso",
+        "preco": "5.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/bebida-cafe.png"
+    },
+    {
+        "id": "beb002",
+        "nome": "Suco de Laranja Natural",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/bebida-suco.png"
+    }
+]

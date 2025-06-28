@@ -1,0 +1,66 @@
+/* Estilos para a página de confirmação de pedido (confirmacao.css) */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #E0FFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.confirmation-wrapper {
+    max-width: 600px;
+    width: 100%;
+}
+
+.confirmation-box {
+    background-color: #FFF;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-family: 'Jua', sans-serif;
+    color: #0CC0DF;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.order-details {
+    text-align: left;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.order-details h2 {
+    font-family: 'Jua', sans-serif;
+    margin-bottom: 15px;
+}
+
+.order-details p,
+.order-details li {
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+.back-to-products {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #FF6DC0;
+    color: #FFF;
+    padding: 12px 25px;
+
+}
