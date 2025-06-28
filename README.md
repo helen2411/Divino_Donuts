@@ -170,3 +170,8 @@ Página "Minha Conta": Desenvolver a página onde usuários logados podem ver se
 Painel Administrativo: Criar uma área restrita para o administrador do site poder adicionar/editar produtos sem precisar alterar o arquivo JSON manualmente.
 Integração com Gateway de Pagamento: Estudar a API de serviços como Mercado Pago, PagSeguro ou Stripe para processar pagamentos reais.
 
+
+
+
+
+
