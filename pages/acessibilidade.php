@@ -46,6 +46,7 @@ $nome_usuario = $usuario_logado ? htmlspecialchars($_SESSION['nome']) : '';
         </header>
 
         <main class="accessibility-main-content">
+            
             <section class="accessibility-section" id="libras-section">
                 <h2 class="section-title">Libras</h2>
                 <div class="options-grid">
@@ -58,11 +59,89 @@ $nome_usuario = $usuario_logado ? htmlspecialchars($_SESSION['nome']) : '';
             <section class="accessibility-section" id="font-control-section">
                 <h2 class="section-title">Controle de Fontes</h2>
                 <div class="options-grid">
-                    <button class="option-button" data-feature="tamanho-fonte"><i class="fas fa-font option-icon"></i><span>Tamanho</span></button>
-                    <button class="option-button" data-feature="espacamento-letras"><i class="fas fa-expand-alt option-icon"></i><span>Espaçamento<br>-Letras</span></button>
-                    </div>
+                    <button class="option-button" data-feature="tamanho-fonte">
+                        <i class="fas fa-font option-icon"></i>
+                        <span>Tamanho</span>
+                    </button>
+                    <button class="option-button" data-feature="espacamento-letras">
+                        <i class="fas fa-expand-alt option-icon"></i>
+                        <span>Espaçamento<br>-Letras</span>
+                    </button>
+                    <button class="option-button" data-feature="estilo-letra">
+                        <i class="fas fa-italic option-icon"></i>
+                        <span>Estilo de Letra</span>
+                    </button>
+                    <button class="option-button" data-feature="negrito">
+                        <i class="fas fa-bold option-icon"></i>
+                        <span>Negrito</span>
+                    </button>
+                    <button class="option-button" data-feature="espacamento-linhas">
+                        <i class="fas fa-text-height option-icon"></i>
+                        <span>Espaçamento<br>Linhas</span>
+                    </button>
+                </div>
             </section>
-            </main>
+
+            <section class="accessibility-section" id="navigation-section">
+                <h2 class="section-title">Navegação</h2>
+                <div class="options-grid">
+                    <button class="option-button" data-feature="leitor-site">
+                        <i class="fas fa-volume-up option-icon"></i>
+                        <span>Leitor de Site</span>
+                    </button>
+                    <button class="option-button" data-feature="modo-escuro-claro">
+                        <i class="fas fa-moon option-icon"></i>
+                        <span>Modo<br>Escuro/Claro</span>
+                    </button>
+                    <button class="option-button" data-feature="pausar-animacoes">
+                        <i class="fas fa-pause-circle option-icon"></i>
+                        <span>Pausar<br>Animações</span>
+                    </button>
+                    <button class="option-button" data-feature="guia-leitura">
+                        <i class="fas fa-book-reader option-icon"></i>
+                        <span>Guia de Leitura</span>
+                    </button>
+                    <button class="option-button" data-feature="destaque-links">
+                        <i class="fas fa-link option-icon"></i>
+                        <span>Destaque<br>de Links</span>
+                    </button>
+                    <button class="option-button" data-feature="estrutura-pagina">
+                        <i class="fas fa-sitemap option-icon"></i>
+                        <span>Estrutura da Página</span>
+                    </button>
+                    <button class="option-button" data-feature="lupa-conteudo">
+                        <i class="fas fa-search-plus option-icon"></i>
+                        <span>Lupa de Conteúdo</span>
+                    </button>
+                    <button class="option-button" data-feature="ocultar-imagens">
+                        <i class="fas fa-image option-icon"></i>
+                        <span>Ocultar Imagens</span>
+                    </button>
+                    <button class="option-button" data-feature="destacar-cabecalho">
+                        <i class="fas fa-underline option-icon"></i>
+                        <span>Destacar Cabeçalho</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="accessibility-section" id="color-control-section">
+                <h2 class="section-title">Controle de Cor</h2>
+                <div class="options-grid">
+                    <button class="option-button" data-feature="contraste-cores">
+                        <i class="fas fa-adjust option-icon"></i>
+                        <span>Contraste<br>de Cores</span>
+                    </button>
+                    <button class="option-button" data-feature="intensidade-cores">
+                        <i class="fas fa-fill-drip option-icon"></i>
+                        <span>Intensidade<br>de Cores</span>
+                    </button>
+                    <button class="option-button" data-feature="cores-pagina">
+                        <i class="fas fa-palette option-icon"></i>
+                        <span>Cores da Página</span>
+                    </button>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script src="../scripts/acessibilidade.js"></script>
