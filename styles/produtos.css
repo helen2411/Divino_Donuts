@@ -1,0 +1,555 @@
+/* Importação de fontes */
+/* @import url('https://fonts.googleapis.com/css2?family=Jua&family=Inter:wght@400;700&display=swap'); */
+
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;       
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    /* color: #333; */
+    background-image: url(../img/banners/opcao6.png); /* Fundo padrão */
+    overflow-x: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ========================================================= */
+/* ESTILO COMPLETO E CORRIGIDO PARA O TÍTULO "PRODUTOS"    */
+/* ========================================================= */
+
+.page-title {
+    font-family: 'Jua', sans-serif;
+    font-size: 2.5em;
+    color: #0CC0DF;       /* A cor azul turquesa original */
+    margin-bottom: 30px;
+    width: 100%;             /* Garante que o elemento ocupe o espaço para se centralizar */
+    text-align: center;      /* A centralização que adicionamos */
+}
+
+/* Layout principal */
+.products-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding-bottom: 80px; /* Espaço para o ícone de acessibilidade */
+    padding-top: 100px; /* Espaço para o cabeçalho fixo */
+}
+
+/* Cabeçalho */
+
+/* --- CABEÇALHO --- */
+.products-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0CC0DF;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.products-header .menu-toggle {
+    background: none; border: none; color: #FFFFFF; font-size: 1.8em; cursor: pointer; padding: 5px;
+}
+
+.search-bar-container {
+    flex-grow: 1; /* Permite que o container cresça */
+    display: flex;
+}
+
+/* Novo: Estilo para o formulário de busca */
+.search-form {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 50px;
+    padding: 8px 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o formulário no espaço disponível */
+}
+
+.search-form input {
+    flex-grow: 1;
+    border: none; outline: none; background: transparent; margin: 0; padding: 0;
+    font-size: 16px;
+}
+
+.search-form button {
+    background: none; border: none; padding: 0; margin: 0; cursor: pointer;
+    color: #888; font-size: 18px; padding-left: 10px;
+}
+
+.products-header .cart-icon {
+    color: #FFFFFF; font-size: 1.8em; text-decoration: none; padding: 5px;
+}
+
+/* --- FILTROS --- */
+.category-filters {
+    display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; flex-wrap: wrap;
+}
+
+/* Estilo para os filtros (que agora são links <a>) */
+.filter-button {
+    padding: 10px 25px; border-radius: 50px; font-family: 'Jua', sans-serif;
+    font-size: 1.1em; cursor: pointer; transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); text-decoration: none;
+    border: 3px solid transparent; background-color: #FFF; color: #555;
+}
+
+.filter-button:hover { transform: translateY(-3px); }
+.filter-button.yellow-border { background-color: #F1EF30; color: #333; }
+.filter-button.blue-border { background-color: #0CC0DF; color: #FFFFFF; }
+.filter-button.pink-border { background-color: #FF6DC0; color: #FFFFFF; }
+.filter-button.active { border-color: #FF6DC0; transform: scale(1.05); }
+
+/* --- CSS ADICIONAL PARA OS CARDS (já fornecido antes) --- */
+.product-grid .product-link { text-decoration: none; color: inherit; }
+.product-grid .product-image { width: 100%; height: 150px; object-fit: cover; }
+.product-grid .product-name { font-weight: bold; margin-top: 10px; }
+.product-grid .product-price { color: #0CC0DF; font-weight: bold; }
+
+/* Grade de Produtos (CSS Grid!) */
+
+.product-grid {
+    display: grid;
+    /* 5 colunas para telas grandes, com auto-fit para responsividade */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px; /* Espaço entre os cards */
+    width: 100%;
+    max-width: 1200px; /* Largura máxima da grade */
+    justify-content: center; /* Centraliza a grade quando há menos de 5 colunas */
+}
+
+.product-card {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 3px solid #F1EF30; /* Borda amarela geral como na imagem */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image-placeholder {
+    background-color: #FF6DC0; /* Cor rosa do placeholder */
+    width: 100%;
+    height: 180px; /* Altura da área da imagem */
+    display: flex; /* Para centralizar conteúdo interno se houver */
+    justify-content: center;
+    align-items: center;
+    /* Se for imagem, pode ser background-image ou img tag dentro */
+}
+
+.add-to-cart-button {
+    background-color: #F1EF30; /* Amarelo do botão */
+    color: #FFFFFF; /* Cor do texto "Adicionar ao Carrinho" */
+    font-family: 'Jua', sans-serif;
+    font-size: 1em;
+    padding: 10px 15px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #e0de2f; /* Escurece um pouco no hover */
+}
+
+
+/* Ícone de Acessibilidade */
+
+.accessibility-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0CC0DF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 2.2em;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.accessibility-icon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Reduz o minmax */
+        gap: 25px;
+    }
+    .product-image-placeholder {
+        height: 160px;
+    }
+}
+
+@media (max-width: 992px) {
+    .products-header {
+        flex-wrap: wrap; /* Permite que os itens do cabeçalho quebrem a linha */
+        justify-content: space-between;
+        gap: 15px; /* Espaço entre os itens */
+        padding: 15px 20px;
+    }
+
+    .search-bar-container {
+        width: 100%; /* Aumenta a largura da barra de busca */
+        /* max-width: none; Remove o max-width */
+        order: 1; /* Coloca a barra de busca na segunda linha */
+        margin: 0;
+    }
+
+    .menu-toggle, .cart-icon {
+        font-size: 1.6em;
+    }
+
+    .page-title {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    .category-filters {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .filter-button {
+        font-size: 1em;
+        padding: 8px 20px;
+        
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .product-image-placeholder {
+        height: 150px;
+    }
+
+    .add-to-cart-button {
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-page-wrapper {
+        padding-top: 120px; /* Mais espaço para o cabeçalho em duas linhas */
+    }
+
+    .products-header {
+        padding: 10px;
+    }
+    .search-bar-container {
+        width: 90%;
+    }
+
+    .page-title {
+        font-size: 1.8em;
+    }
+
+    .category-filters {
+        flex-direction: column; /* Empilha os filtros */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .filter-button {
+        width: 80%; /* Aumenta a largura dos botões de filtro */
+        max-width: 250px;
+        font-size: 0.95em;
+        padding: 10px 15px;
+        
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Reduz mais o minmax */
+        gap: 15px;
+    }
+
+    .product-image-placeholder {
+        height: 130px;
+    }
+
+    .accessibility-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-page-wrapper {
+        padding-top: 100px; /* Ajuste se o header ficar menor */
+    }
+    .products-header {
+        padding: 8px;
+    }
+    .menu-toggle, .cart-icon {
+        font-size: 1.4em;
+    }
+    .search-bar-container {
+        width: 95%;
+        padding: 3px 10px;
+    }
+    .search-bar-container input {
+        font-size: 0.9em;
+    }
+    .search-button {
+        font-size: 1em;
+    }
+
+    .page-title {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .filter-button {
+        width: 90%;
+        font-size: 0.9em;
+        padding: 8px 12px;
+        
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Min para 2 ou 3 colunas em tela pequena */
+        gap: 10px;
+    }
+
+    .product-card {
+        border-radius: 15px;
+    }
+
+    .product-image-placeholder {
+        height: 100px;
+    }
+
+    .add-to-cart-button {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    .accessibility-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* CSS BÁSICO PARA O MENU E O BOTÃO  */
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #F1EF30; /* Amarelo do botão */
+            color: #fff;
+        }
+
+        .main-nav {
+            display: none; /* Escondido por padrão */
+            flex-direction: column;
+            background-color: #ddf21d;
+            position: absolute;
+            top: 60px; /* Ajuste conforme a altura do seu cabeçalho */
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            border:2px solid white;
+        }
+
+        .main-nav.is-open {
+            display: flex; /* Mostra o menu quando a classe 'is-open' é adicionada */
+        }
+
+        .main-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+
+        .main-nav ul li {
+            border-bottom: 3px solid #ffffff;
+        }
+
+        .main-nav ul li:last-child {
+            border-bottom: none;
+        }
+
+        .main-nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .main-nav ul li a:hover {
+            background-color: #00ccff;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px;
+            
+        }
+
+        /* Mostrar o botão do menu em telas menores (mobile) */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block; /* Mostra o botão do menu em telas pequenas */
+            }
+            .main-nav {
+                display: none; /* Garante que o menu principal esteja escondido em mobile */
+            }
+        }
+
+        /* Em telas maiores, o menu pode estar sempre visível, e o botão hidden */
+        @media (min-width: 769px) {
+            .main-nav {
+                display: none; /* Escondido por padrão */
+                flex-direction: column;
+                background-color: #ddf21d;
+                position: absolute;
+                top: 60px; /* Ajuste conforme a altura do seu cabeçalho */
+                left: 0;
+                width: 15%;
+                z-index: 999;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                border:2px solid white;
+            }
+            .main-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+            }
+            .main-nav ul li {
+                border-bottom: 3px solid #ffffff;
+            }
+            .main-nav ul li a {
+                display: block;
+                padding: 15px 20px;
+                color: #fff;
+                text-decoration: none;
+                transition: background-color 0.3s;
+            }
+            .main-nav ul li a:hover {
+                background-color: transparent; 
+                color: #00ccff;
+            }
+        }
+
+/* =================================================== */
+/* SUGESTÃO: Adicionar ao final do seu produtos.css    */
+/* =================================================== */
+
+/* Transforma a área do produto em um link clicável */
+.product-card .product-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Faz o link ocupar o espaço disponível no card */
+    padding: 15px;
+    text-align: center;
+}
+
+/* Estilo para a imagem do produto */
+.product-image {
+    width: 100%;
+    height: 140px; /* Altura fixa para alinhar as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 10px; /* Bordas arredondadas para a imagem */
+    margin-bottom: 10px;
+}
+
+/* Remove a div de placeholder rosa, já que agora temos imagens reais */
+.product-image-placeholder {
+    display: none;
+}
+
+/* Estilo para o nome do produto */
+.product-name {
+    font-family: 'Jua', sans-serif;
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 8px;
+    /* Faz com que o nome ocupe o espaço necessário para alinhar os preços abaixo */
+    flex-grow: 1; 
+}
+
+/* Estilo para o preço do produto */
+.product-price {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0CC0DF; /* Azul, cor de destaque */
+}
+
+/* ========================================================= */
+/* AJUSTE FINAL: Centralização do Título e da Grade      */
+/* ========================================================= */
+
+/* 1. Centraliza o título "Produtos" */
+.page-title {
+    text-align: center;
+}
+
+/* 2. Centraliza o container da grade de produtos na página */
+.product-grid {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========================================================= */
+/* AJUSTE FINAL: Espaçamento lateral para o conteúdo     */
+/* ========================================================= */
+
+.products-main-content {
+    /* Adiciona 20px de espaçamento à esquerda e à direita */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+

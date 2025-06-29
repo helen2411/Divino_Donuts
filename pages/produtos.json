@@ -1,0 +1,226 @@
+[
+    {
+        "id": "doce001",
+        "nome": "Donut de Morango com Chocolate",
+        "preco": "8.50",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dchocmor.png"
+    },
+    {
+        "id": "doce002",
+        "nome": "Donut de Bonoffe",
+        "preco": "9.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dbonoffe.png"
+    },
+    {
+        "id": "doce003",
+        "nome": "Donut de Doce de Leite",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dchurros.png"
+    },
+    {
+        "id": "doce004",
+        "nome": "Donut de Pistache",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dpistache.png"
+    },
+    {
+        "id": "doce005",
+        "nome": "Donut de Red Velvert",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dredvelvert.png"
+    },
+    {
+        "id": "doce006",
+        "nome": "Donut de Ouro Branco",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dourobranco.png"
+    },
+    {
+        "id": "doce007",
+        "nome": "Donut de Oreo",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/doreo.png"
+    },
+    {
+        "id": "doce008",
+        "nome": "Donut de Paçoca",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/donutpacoca.png"
+    },
+     {
+        "id": "doce009",
+        "nome": "Donut de Ferrero Rocher",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/donutferrero.png"
+    },
+     {
+        "id": "doce010",
+        "nome": "Donut de Ninho com Morango",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dninhocmor.png"
+    },
+     {
+        "id": "doce011",
+        "nome": "Donut de Leite Ninho",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dninho.png"
+    },
+     {
+        "id": "doce012",
+        "nome": "Donut de M&Ms",
+        "preco": "8.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/dmms.png"
+    },
+     {
+        "id": "doce013",
+        "nome": "Caixa com 4 Donuts Doces",
+        "preco": "25.00",
+        "categoria": "doces",
+        "imagem": "../img/produtos/caixa4donuts.png"
+    },
+    {
+        "id": "salg001",
+        "nome": "Donut de Calabresa com Queijo Cheddar",
+        "preco": "10.00",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/dcalabresached.png"
+    },
+    {
+        "id": "salg002",
+        "nome": "Donut de Marguerita",
+        "preco": "10.50",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/dmarguerita.png"
+    },
+     {
+        "id": "salg003",
+        "nome": "Donut de Peito de Peru",
+        "preco": "10.50",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/dpeitodeperu.png"
+    },
+    {
+        "id": "salg004",
+        "nome": "Donut de Frango Desfiado",
+        "preco": "10.50",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/dfrango.png"
+    },
+    {
+        "id": "salg005",
+        "nome": "Donut de Carne com Quijo Qualho",
+        "preco": "10.50",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/dcarne.png"
+    },
+    {
+        "id": "salg006",
+        "nome": "Donut de Presunto e Queijo",
+        "preco": "10.50",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/dpresunto.png"
+    },
+    {
+        "id": "salg007",
+        "nome": "Donut Vegetariano",
+        "preco": "10.50",
+        "categoria": "salgados",
+        "imagem": "../img/produtos/dvegetariano.png"
+    },
+    {
+        "id": "beb001",
+        "nome": "Café Expresso",
+        "preco": "5.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/cafeexpresso.png"
+    },
+    {
+        "id": "beb002",
+        "nome": "Suco de Laranja Natural",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/sucolaranja.png"
+    },
+    {
+        "id": "beb003",
+        "nome": "Suco de Maracujá Natural",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/sucomaracuja.png"
+    },
+    {
+        "id": "beb004",
+        "nome": "Milkshake de Oreo",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/shakeoreo.png"
+    },
+    {
+        "id": "beb005",
+        "nome": "Milkshake de Morango",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/shakemorango.png"
+    },
+    {
+        "id": "beb006",
+        "nome": "Milkshake de Caramelo Crocante",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/shakedecaramelo.png"
+    },
+    {
+        "id": "beb007",
+        "nome": "Milkshake de Ovo Maltine",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/shakecrocante.png"
+    },
+    {
+        "id": "beb008",
+        "nome": "Milkshake de Kinder Bueno",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/shakebueno.png"
+    },
+    {
+        "id": "beb009",
+        "nome": "Milkshake de Baunilha",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/shakebaunilhachoc.png"
+    },
+    {
+        "id": "beb010",
+        "nome": "Capuccino com Canela",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/capuccino.png"
+    },
+    {
+        "id": "beb011",
+        "nome": "Chocolate Quente",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/chocolatequente.png"
+    },
+    {
+        "id": "beb012",
+        "nome": "Creme de Morango",
+        "preco": "7.00",
+        "categoria": "bebidas",
+        "imagem": "../img/produtos/crememorango.png"
+    }
+]
